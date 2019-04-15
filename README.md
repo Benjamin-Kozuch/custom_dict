@@ -47,9 +47,35 @@ Looking up a value (`print(my_dict['x'])`) involves taking the hash of the passe
 
 No need to install any libraries. Just have Python 3 installed
 
-`$ python custom_dict_test.py` 
+`$ python tests.py` 
 
 
+# Run from interpreter
 
+```
+$ python -i custom_dict.py
+>>> my_dict = Dict()
+>>> my_dict['name'] = 'Ben'
+>>> my_dict['favorite language'] = 'python'
+>>> my_dict.items()
+[('favorite language', 'python'), ('name', 'Ben')]
+>>> my_dict.keys()
+['favorite language', 'name']
+>>> my_dict.values()
+['python', 'Ben']
+>>> my_dict.get('species', 'human')
+'human'
+>>> my_dict['species']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "custom_dict.py", line 13, in __getitem__
+    raise KeyError
+KeyError
+>>> len(my_dict)
+2
+>>> my_dict
+[('favorite language', 'python'), ('name', 'Ben')]
+
+```
 
 
