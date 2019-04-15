@@ -30,14 +30,15 @@ Examples:
 
 (upon initializing the Dict)
 
-my_dict = Dict(('x', 1))
+`my_dict = Dict(('x', 1))`
 
 (after initializing the Dict)
 
+```
 my_dict['x'] = 2
 my_dict['y'] = 3
 my_dict[(3,4,5)] = 4
-
+```
 ## Lookup
 
 Looking up a value (`print(my_dict['x'])`) involves taking the hash of the passed in key. Then take the remainder of that element after dividing by the storage size. Check that position in the list. If that element has the same key as the one we are looking up, then return the value associated with that key. If not, then keep jumping and jumping to the next element until we find a key that matches the one we are looking up and then return that value associated with that key.
